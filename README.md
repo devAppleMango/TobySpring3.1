@@ -11,3 +11,6 @@
 - [1-10](https://github.com/devAppleMango/TobySpring3.1/tree/603cba7e7a95caff4b00d013a3076d2ee63a709d)
 - [1-12](https://github.com/devAppleMango/TobySpring3.1/tree/87588284a7146e7f2fb2a03ec0b8df8dc70c998d)
 - [1-15](https://github.com/devAppleMango/TobySpring3.1/tree/5dfe2d5a5e7cf43e57dc1355fb428a0ca41dfbd1)
+- [1-17] (https://github.com/devAppleMango/TobySpring3.1/tree/b44963e70b5a9c88b0b6ec8ff4d1334d1bc5af09)
+- [1-19] (https://github.com/devAppleMango/TobySpring3.1/tree/253a0a645656da120a5724a398223a94c4e5ba50)
+- [1-23] (https://github.com/devAppleMango/TobySpring3.1/tree/ac77e3f57b4e624aa979dd5fc5856edacd206144)
