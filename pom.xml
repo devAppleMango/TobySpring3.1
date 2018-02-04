@@ -28,17 +28,24 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
-			<version>3.0.7.RELEASE</version>
+			<version>4.1.6.RELEASE</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-instrument</artifactId>
-			<version>3.0.7.RELEASE</version>
+			<version>4.1.6.RELEASE</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-jdbc</artifactId>
-			<version>3.0.7.RELEASE</version>
+			<version>4.1.6.RELEASE</version>
+		</dependency>
+		<!-- JUNIT -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.7</version>
+			<scope>test</scope>
 		</dependency>
 		<!-- CGLIB -->
 		<dependency>
