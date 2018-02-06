@@ -19,19 +19,18 @@ public class UserDao {
 	}
 
 	public void add(final User user) throws ClassNotFoundException, SQLException {
-		class AddStatement implements StatementStrategy {
-			public PreparedStatement makePreparedStatement(Connection c) throws SQLException {
-				PreparedStatement ps = c.prepareStatement("insert into users(id, name,password) values(?,?,?)");				
-				ps.setString(1,  user.getId());
-				ps.setString(2,  user.getName());
-				ps.setString(3,  user.getPassword());
-				
-				return ps;
-			}			
-		}
-		
-		StatementStrategy st = new AddStatement();
-		jdbcContextWithStatementStrategy(st);
+		jdbcContextWithStatementStrategy(
+			new StatementStrategy() {
+				public PreparedStatement makePreparedStatement(Connection c) throws SQLException {
+					PreparedStatement ps = c.prepareStatement("insert into users(id, name,password) values(?,?,?)");				
+					ps.setString(1,  user.getId());
+					ps.setString(2,  user.getName());
+					ps.setString(3,  user.getPassword());
+					
+					return ps;
+				}			
+			}
+		);
 	}
 
 	public User get(String id) throws ClassNotFoundException, SQLException {
@@ -59,8 +58,14 @@ public class UserDao {
 	}
 
 	public void deleteAll() throws SQLException {
-		StatementStrategy st = new DeleteAllStatement();
-		jdbcContextWithStatementStrategy(st);
+		jdbcContextWithStatementStrategy(
+			new StatementStrategy() {
+				public PreparedStatement makePreparedStatement(Connection c) throws SQLException {
+					PreparedStatement ps = c.prepareStatement("delete from users");
+					return ps;
+				}
+			}
+		);
 	}
 
 	public int getCount() throws SQLException {
@@ -78,7 +83,7 @@ public class UserDao {
 
 		return count;
 	}
-	
+
 	public void jdbcContextWithStatementStrategy(StatementStrategy stmt) throws SQLException {
 		Connection c = null;
 		PreparedStatement ps = null;
@@ -87,7 +92,7 @@ public class UserDao {
 			c = dataSource.getConnection();
 
 			ps = stmt.makePreparedStatement(c);
-			
+
 			ps.executeUpdate();
 		} catch (SQLException e) {
 			throw e;
