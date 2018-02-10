@@ -37,4 +37,18 @@ public class Calculator {
 		};
 		return fileReadTemplate(filepath, sumCallback);
 	}
+
+	public Integer calcMultiply(String filepath) throws IOException {
+		BufferedReaderCallback multiplyCallback = new BufferedReaderCallback() {			
+			public Integer doSomethingWithReader(BufferedReader br) throws IOException {
+				Integer sum = 1;
+				String line = null;
+				while((line = br.readLine()) != null) {
+					sum *= Integer.valueOf(line);
+				}
+				return sum;
+			}
+		};
+		return fileReadTemplate(filepath, multiplyCallback);
+	}
 }

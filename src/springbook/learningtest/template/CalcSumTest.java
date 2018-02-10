@@ -21,5 +21,10 @@ public class CalcSumTest {
 	@Test
 	public void sumOfNumbers() throws IOException {
 		assertThat(calculator.calcSum(this.numFilepath), is(10));
-	}  
+	} 
+	
+	@Test
+	public void multiplyOfNumbers() throws IOException {
+		assertThat(calculator.calcMultiply(this.numFilepath), is(24));
+	} 
 }
