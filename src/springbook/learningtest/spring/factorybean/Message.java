@@ -3,7 +3,7 @@ package springbook.learningtest.spring.factorybean;
 public class Message {
 	String text;
 
-	private Message(String text) {
+	protected Message(String text) {
 		this.text = text;
 	}
 	
