@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:aop="http://www.springframework.org/schema/aop"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
-              http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+              http://www.springframework.org/schema/beans/spring-beans-3.0.xsd            
+              http://www.springframework.org/schema/aop
+              http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
 
 	<bean id="userDao" class="springbook.user.dao.UserDaoJDBC">
 		<property name="dataSource" ref="dataSource" />
@@ -29,16 +32,10 @@
 	<bean id="transactionAdvice" class="springbook.user.service.TransactionAdvice">
 		<property name="transactionManager" ref="transactionManager" />
 	</bean>
-	
-	<bean id="transactionPointcut" class="springbook.user.service.NameMatchClassMethodPointcut">
-		<property name="mappedClassName" value="*ServiceImpl" />
-		<property name="mappedName" value="upgrade*" />
-	</bean>
-	
-	<bean id="transactionAdvisor" class="org.springframework.aop.support.DefaultPointcutAdvisor">
-		<property name="advice" ref="transactionAdvice" />
-		<property name="pointcut" ref="transactionPointcut" />
-	</bean>
+		
+	<aop:config>
+		<aop:advisor advice-ref="transactionAdvice" pointcut="execution(* *..*ServiceImpl.upgrade*(..))" />
+	</aop:config>
 	
 	<bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator" />
 	

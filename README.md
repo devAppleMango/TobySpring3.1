@@ -64,3 +64,18 @@
 - [5-50](https://github.com/devAppleMango/TobySpring3.1/tree/88bcebed27f2aab6b504382851f5315ce41eb478)
 - [5-56](https://github.com/devAppleMango/TobySpring3.1/tree/73f7b1b6311fdad220f869d8143c8f2d285af158)
 - [5-58](https://github.com/devAppleMango/TobySpring3.1/tree/6e51b89e84ce1138c0274437fe8f984bfce7a14d)
+
+## Chapter 6
+- [6-9](https://github.com/devAppleMango/TobySpring3.1/tree/44e0330a10024ac15b30c08938adccb59f2a16ba)
+- [6-13](https://github.com/devAppleMango/TobySpring3.1/tree/a213e1e716a649c182f6b1f4f4e99d1f2fc27a9f)
+- [6-22](https://github.com/devAppleMango/TobySpring3.1/tree/783534a1e1268da25ed0517cdb27ca36da010dfe)
+- [6-24](https://github.com/devAppleMango/TobySpring3.1/tree/0ce6bb534fd5b1a20440fac5b51ce3bbac49fc6c)
+- [6-26](https://github.com/devAppleMango/TobySpring3.1/tree/d4282a74cefac1759b1b83d41c280c418d56ad65)
+- [6-28](https://github.com/devAppleMango/TobySpring3.1/tree/9855aaf2a0eb68ff8c2ac9eb9d904e53fddf436c)
+- [6-34](https://github.com/devAppleMango/TobySpring3.1/tree/66c58c684253b2bf39093f74ed162019c4ea40e5)
+- [6-37](https://github.com/devAppleMango/TobySpring3.1/tree/5931478d21d30517e02283cf9e04f6c0188a1b5a)
+- [6-42](https://github.com/devAppleMango/TobySpring3.1/tree/c1f0c65fd0f0d9000700fc175ace59adbc08e7ed)
+- [6-48](https://github.com/devAppleMango/TobySpring3.1/tree/a3609830b6e1f85a76c310dae15e57ccacc6c202)
+- [6-50](https://github.com/devAppleMango/TobySpring3.1/tree/5708f7585dc75ff1342baf963b58493ce0021fee)
+- [6-56](https://github.com/devAppleMango/TobySpring3.1/tree/b4f5efadfc2e7da8cfca13792897a5d8fabaedfe)
+- [6-64](https://github.com/devAppleMango/TobySpring3.1/tree/e05032cb3e0cf4d37c0e3734ef8d4c690252390d)
