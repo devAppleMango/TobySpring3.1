@@ -14,9 +14,9 @@ import java.util.List;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.aop.framework.ProxyFactoryBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
+import org.springframework.dao.TransientDataAccessResourceException;
 import org.springframework.mail.MailException;
 import org.springframework.mail.MailSender;
 import org.springframework.mail.SimpleMailMessage;
@@ -53,6 +53,13 @@ public class UserServiceTest {
 		protected void upgradeLevel(User user) {
 			if (user.getId().equals(this.id)) throw new TestUserServiceException();
 			super.upgradeLevel(user);
+		}
+		
+		public List<User> getAll() {
+			for(User user : super.getAll()) {
+				super.update(user);
+			}
+			return null;
 		}
 	}
 	
@@ -187,5 +194,10 @@ public class UserServiceTest {
 		}
 		
 		checkLevelUpgraded(users.get(1), false);
+	}
+	
+	@Test(expected=TransientDataAccessResourceException.class)
+	public void readOnlyTransactionAttribute() {
+		testUserService.getAll();
 	}
 }
