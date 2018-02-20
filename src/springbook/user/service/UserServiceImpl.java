@@ -26,17 +26,6 @@ public class UserServiceImpl implements UserService {
 	public void setMailSender(MailSender mailSender) {
 		this.mailSender = mailSender;
 	}
-
-	/*public void upgradeLevels() {		
-		TransactionStatus status = this.transactionManager.getTransaction(new DefaultTransactionDefinition());		
-		try {
-			upgradeLevelsInternal();
-			this.transactionManager.commit(status);
-		} catch (RuntimeException e) {
-			this.transactionManager.rollback(status);
-			throw e;
-		}
-	}*/
 	
 	public void upgradeLevels() {
 		List<User> users = userDao.getAll();
@@ -77,4 +66,22 @@ public class UserServiceImpl implements UserService {
 		
 		this.mailSender.send(mailMessage);
 	}
+
+	public User get(String id) {
+		return userDao.get(id);
+	}
+
+	public List<User> getAll() {
+		return userDao.getAll();
+	}
+
+	public void deleteAll() {
+		userDao.deleteAll();		
+	}
+
+	public void update(User user) {
+		userDao.update(user);
+	}
+	
+	
 }
