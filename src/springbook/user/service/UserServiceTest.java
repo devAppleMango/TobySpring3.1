@@ -39,8 +39,6 @@ public class UserServiceTest {
 	@Autowired
 	UserService testUserService;
 	@Autowired
-	PlatformTransactionManager transactionManager;
-	@Autowired
 	MailSender mailSender;
 	@Autowired
 	ApplicationContext context;
