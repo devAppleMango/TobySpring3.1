@@ -79,3 +79,7 @@
 - [6-50](https://github.com/devAppleMango/TobySpring3.1/tree/5708f7585dc75ff1342baf963b58493ce0021fee)
 - [6-56](https://github.com/devAppleMango/TobySpring3.1/tree/b4f5efadfc2e7da8cfca13792897a5d8fabaedfe)
 - [6-64](https://github.com/devAppleMango/TobySpring3.1/tree/e05032cb3e0cf4d37c0e3734ef8d4c690252390d)
+- [6-68](https://github.com/devAppleMango/TobySpring3.1/tree/07e45e52359d2e65f69247b0652b21fae1b83cad)
+- [6-80](https://github.com/devAppleMango/TobySpring3.1/tree/990d28ab343a558864ed8b0f494bebdeb19baefd)
+- [6-83](https://github.com/devAppleMango/TobySpring3.1/tree/f37189581cc4f4fc3c92e74b338d5c9a9450852d)
+- [6-87](https://github.com/devAppleMango/TobySpring3.1/tree/32f61fbc0222ad434d1748412fe1c695a4163ab5)
