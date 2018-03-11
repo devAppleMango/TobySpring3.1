@@ -5,7 +5,6 @@ import static org.junit.Assert.assertThat;
 
 import java.io.IOException;
 import java.util.List;
-import java.util.Scanner;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;

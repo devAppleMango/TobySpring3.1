@@ -16,7 +16,13 @@
 		<property name="sqlService" ref="sqlService" />
 	</bean>
 
-	<bean id="sqlService" class="springbook.user.sqlservice.DefaultSqlService"  />
+	<bean id="sqlService" class="springbook.user.sqlservice.OxmSqlService">
+	    <property name="unmarshaller" ref="unmarshaller" />
+	</bean>
+	
+	<bean id="unmarshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
+	    <property name="contextPath" value="springbook.user.sqlservice.jaxb" />
+	</bean>
 
 	<bean id="dataSource"	class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
 		<property name="driverClass" value="com.mysql.jdbc.Driver" />
@@ -53,4 +59,6 @@
 	</aop:config>
 		
 	<bean id="testUserService" class="springbook.user.service.UserServiceTest$TestUserServiceImpl" parent="userService" />
+	
+	<bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator" />
 </beans>
